@@ -1,106 +1,131 @@
-{% extends "base.html" %}
+{% extends 'base2.html' %}
 
-{% block title %}
-<title>Panel</title>
-{% endblock %}
+{% block title %} Profile {% endblock %}
+{% block pagename %} Profile {% endblock %}
 
 
-{% block sidenav %}
-<ul class="navbar-nav mt-2 pt-2  text-center">
-    <li class="nav-item active mt-2 pt-2">
-        <a class="nav-link "href="http://">Servers</a>
-    </li>
-    <li class="nav-item active mt-2 pt-2">
-        <a  class="nav-link"href="http://">Profile</a>
-    </li>
-    <li class="nav-item active mt-2 pt-2">
-        <a class="nav-link" href="http://">Settings</a>
-    </li>
-</ul>
-{% endblock %}
 
 {% block main %}
-<div class="row mt-2 pt-2">
-    <div class="col-sm-5 text-center">
-       <div class="card bg-custom-light shadow p-3 mb-5 rounded">
-          <div class="card-body">
-             <img class="rounded-circle mb-2 pb-2 " width="200px" height="200px" src="./assets/1.jpg" alt=""> <br>
-             <a href="#" class="btn color bg-custom-color text-white">Change profile picture</a>
-          </div>
-       </div>
+
+<div class="container-fluid">
+    <div class="row g-0">
+        <div class="col-5">
+            <div class="container my-5">
+            <div class="card shadow-lg p-3 mb-5 bg-body rounded" style="width: 30rem;">
+                <img src="data:image/jpeg;base64,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"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="profile">
+                        <div class="text-center">
+                            <img style="margin-top: -120px;" width="180px" height="180px"
+                                src="https://cdn.fastly.picmonkey.com/contentful/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=800&q=70"
+                                class="rounded-circle " alt="...">
+                        </div>
+                        <div class="text-center my-2">
+                            <p class="h4">UserName</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <form action="post">
+                            <div class="mb-3 text-center">
+                                <label for="formFileSm" class="form-label">New Profile Picture</label>
+                                <input class="form-control form-control-sm" id="formFileSm" type="file">
+                            </div>
+                        </form>
+                        <div class="text-center">
+                            <button class="btn btn-success" type="submit">Upload</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <div class="col">
+            <div class="container my-5">
+            <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+                <div class="card-header bg-transparent">
+                    <p class="h4"> Details </p>
+                </div>
+                <div class="card-body">
+                    <div class="form">
+                        <form action="" method="post">
+                            <div class="row g-0">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="abc@gmail.com" disabled>
+                                    <label for="floatingInput">Email address</label>
+                                  </div>
+                            </div>
+                            
+                                  <div class="row g-1">
+                                      <div class="col">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" value="sarthak">
+                                            <label for="floatingInput">First Name</label>
+                                          </div>
+
+                                      </div>
+                                      <div class="col">
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="abc@gmail.com">
+                                            <label for="floatingInput">Last Name</label>
+                                          </div>
+
+                                      </div>
+                                    </div>
+                                    <div class="row g-0">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" value="9109595529">
+                                            <label for="floatingInput">Contact No</label>
+                                          </div>
+                                    </div>
+                                    <div class="row g-0">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" value="">
+                                            <label for="floatingInput">Address</label>
+                                          </div>
+                                    </div>
+                                    <div class="row g-1">
+                                        <div class="col">
+                                          <div class="form-floating mb-3">
+                                              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" value="">
+                                              <label for="floatingInput">City</label>
+                                            </div>
+  
+                                        </div>
+                                        <div class="col">
+                                          <div class="form-floating mb-3">
+                                              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="">
+                                              <label for="floatingInput">State</label>
+                                            </div>
+  
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-floating mb-3">
+                                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="">
+                                                <label for="floatingInput">Zipe Code</label>
+                                              </div>
+    
+                                          </div>
+                                      </div>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="d-flex justify-content-end mx-3">
+                        <button type="submit" class="btn btn-success">Update</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-sm-6">
-       <div class="card bg-custom-light shadow p-3 mb-5 rounded">
-          <div class="card-header bg-custom-light">
-             Details
-          </div>
-          <div class="card-body">
-             <form>
-                <div class="form-row">
-                   <div class="col-sm-12 mb-2 pb-2">
-                      <label for="">Username</label>
-                      <input type="text" class="form-control" placeholder="Username" readonly>
-                   </div>
-                   <div class="col">
-                      <label for="">Email</label>
-                      <input type="text" class="form-control" placeholder="Email">
-                   </div>
-                </div>
-                <div class="form-row mt-2 pt-2">
-                   <div class="col">
-                      <label for="">First Name</label>
-                      <input type="text" class="form-control" placeholder="First Name">
-                   </div>
-                   <div class="col">
-                      <label for="">Last Name</label>
-                      <input type="text" class="form-control" placeholder="Last Name">
-                   </div>
-                </div>
-                <div class="mt-2 pt-2 ">
-                   <button type="submit" class="btn bg-custom-color mb-2 text-white color">Update Details</button>
-                </div>
-             </form>
-          </div>
-       </div>
-    </div>
- </div>
- <div class="row mt-2 pt-2 mb-5">
-    <div class="col-sm-5 text-center">
-    </div>
-    <div class="col-sm-6">
-       <div class="card bg-custom-light shadow p-3 mb-5 rounded ">
-          <div class="card-header bg-custom-light">
-             Details
-          </div>
-          <div class="card-body">
-             <form>
-                <div class="form-row">
-                   <div class="col-sm-12 mb-2 pb-2">
-                      <label for="">Address</label>
-                      <input type="text" class="form-control" placeholder="Address">
-                   </div>
-                </div>
-                <div class="form-row mt-2 pt-2">
-                   <div class="col">
-                      <label for="">City</label>
-                      <input type="text" class="form-control" placeholder="City">
-                   </div>
-                   <div class="col">
-                      <label for="">State</label>
-                      <input type="text" class="form-control" placeholder="State">
-                   </div>
-                </div>
-                <div class="mt-2 pt-2 ">
-                   <button type="submit" class="btn bg-custom-color mb-2 text-white color">Update Details</button>
-                </div>
-             </form>
-          </div>
-       </div>
-    </div>
- </div>
+
+</div>
+</div>
+
+
+
 
 
 {% endblock %}
-
-
-

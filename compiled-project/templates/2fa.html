@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %} Log-In {% endblock %}
+{% block main %}
+
+<div class="container-fluid bg-dark bg-gradient" style="height: 100vh;">
+    <div class="d-flex justify-content-center h-100">
+        <div class="d-flex align-items-center mb-5">
+            <div class="card bg-light bg-gradient" style="width: 30rem;">
+                <div class="card-body">
+                    <div class="container-fluid my-2">
+                        <p>Enter the 6 digit code sent to your registered Email-ID</p>
+                        <form action="" method="post">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="23fsd">
+                                <label for="floatingInput">Two-factor authentication Code</label>
+                            </div>
+                        </form>
+                        <div class=" my-2 text-center">
+                            <button class="btn btn-success" type="submit">Authorize</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
